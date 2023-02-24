@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%) ;
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+body{
+    background-image: url(images/bg-intro-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--red);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: grid;
+}
+
+@media(min-width: 1150px){
+    body{
+        place-content: center;
+    }
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+li{
+    padding-left: 1rem;
+    font-size: 0.8rem;
+    color: var(--red);
+    font-weight: 600;
+    font-style: italic;
+    transform: translateY(-0.8rem);
+}
+
+input:focus{
+    outline: none;
+}
+
+/* Top Content */
+
+.container{
+    padding: 3rem 1.5rem;
+}
+
+@media (min-width: 1150px){
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        gap: 2rem;
+    }
+}
+
+.container .top-content h2{
+    color: #fff;
+    max-width: 15ch;
+    text-align: center;
+    margin: 0 auto 1rem;
+}
+
+@media (min-width: 1150px){
+    .container .top-content h2{
+        margin: 0;
+        text-align: left;
+        font-size: 3rem;
+    }
+}
+
+.container .top-content p{
+    text-align: center;
+    color: rgba(255, 255, 255,0.9);
+    line-height: 1.8;
+    max-width: 32ch;
+    margin: 0 auto 3rem;
+}
+
+@media (min-width: 1150px){
+    .container .top-content p{
+        margin-top: 1rem;
+        text-align: left;
+        max-width: 50ch;
+    }
+}
+
+/* Sign Up - Top Part*/
+
+.container .sign-up{
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.container .sign-up .sign-top-card{
+    background-color: var(--blue);
+    padding: 1.3rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 10px 2px 0px rgba(0,0,0,0.19);
+    -webkit-box-shadow: 0px 10px 2px 0px rgba(0,0,0,0.19);
+    -moz-box-shadow: 0px 10px 2px 0px rgba(0,0,0,0.19);
+}
+
+.container .sign-up .sign-top-card p{
+    color: rgba(255, 255, 255,0.9);
+    max-width: 18ch;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+.container .sign-up .sign-top-card p span{
+    color: #fff;
+    font-weight: 700;
+}
+
+
+/* Sign Up - Bottom Part*/ 
+
+
+.container .sign-up .sign-up-card{
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 2px 0px rgba(0,0,0,0.19);
+    -webkit-box-shadow: 0px 10px 2px 0px rgba(0,0,0,0.19);
+    -moz-box-shadow: 0px 10px 2px 0px rgba(0,0,0,0.19);
+}   
+
+.container .sign-up .sign-up-card input{
+    width: 100%;
+    padding: 0.8rem 0 0.8rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid rgba(204, 204, 204, 0.8);
+}
+
+.container .sign-up .sign-up-card input::placeholder{
+    color: hsl(0, 0%, 0%);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.container .sign-up .sign-up-card button{
+    cursor: pointer;
+    background-color: var(--green);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    padding: 0.9rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+    box-shadow: 1px 5px 0px -1px rgba(33,138,87,0.7);
+    -webkit-box-shadow: 1px 5px 0px -1px rgba(33,138,87,0.7);
+    -moz-box-shadow: 1px 5px 0px -1px rgba(33,138,87,0.7);
+}
+
+.container .sign-up .sign-up-card button .btn-text{
+    transform: translateY(0.2rem);
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.container .sign-up .sign-up-card .footer-text{
+    max-width: 36ch;
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 0 auto;
+    color: var(--grayish-blue);
+    font-weight: 500;
+}
+
+@media (min-width: 1150px){
+    .container .sign-up .sign-up-card .footer-text{
+        max-width: 60ch;
+    }
+}
+
+.container .sign-up .sign-up-card .footer-text span{
+    color: var(--red);
+    font-weight: 700;
+}
+
+.container .sign-up .sign-up-card .input{
+    position: relative;
+}
+
+.container .sign-up .sign-up-card .input .error{
+    display: none;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+
+}
